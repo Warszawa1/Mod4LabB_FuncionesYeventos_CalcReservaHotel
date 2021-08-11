@@ -1,3 +1,1 @@
-Mod4LabB_FuncionesYeventos_CalcReservaHotel
-
-# hotel
+Mod4LabB_FuncionesYeventos_CalcReservaHotel 
