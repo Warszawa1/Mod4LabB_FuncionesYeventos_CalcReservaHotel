@@ -4,14 +4,50 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
     <title>Datos Reserva Hotel</title>
+    <link rel="icon" type="image-png" href="images/location.png">
     <link rel="stylesheet" href="style.css">
-
+   
   </head>
   <body>
-      <fieldset>
+    <header>
+        <h1>CALCULA EL COSTE DE TU RESERVA</h1>
+    </header>
+
+    <div class="flex-container">
+
+        <div>
+            <fieldset >
+            <p>-Precios para habitación Standard</p>
+            <ul class="precios">
+                <li>Uso individual: 75 €</li>
+                <li>Uso doble: 100 €</li>
+                <li>Uso triple: 125 €</li>
+            </ul>
+            <p>-Precios para habitación Junior Suite</p>
+            <ul class="precios">
+                <li>Uso individual: 90 €</li>
+                <li>Uso doble: 120€</li>
+                <li>Uso triple: 150 €</li>
+            </ul>
+            <p>-Precios para habitación Suite</p>
+            <ul class="precios">
+                <li>Uso individual: 112,5 €</li>
+                <li>Uso doble: 150 €</li>
+                <li>Uso triple: 187,5 €</li>
+            </ul>
+        
+            <p>-Precios parking: 10 €/noche.</p>
+            <p>-Precio uso spa: 20 €/noche.</p>
+            </fieldset>
+            </div>
+
+      <div>
+        <fieldset>
     <form name="fdatos">
-      Noches: <input type="number" size="10" name="entrada" id="noches"/>
-    </br><br>
+      Noches: <input type="number" placeholder="introduce nº de noches" size="10" name="entrada" id="noches"/>
+    <div errorNumero id="errorNumero"></div>
+    </br>
+
       Tipo de hab: <select id="lista">
         <option value="75">Hab. Standard, uso individual</option>
         <option value="100">Hab. Standard, uso doble</option>
@@ -25,66 +61,39 @@
       </select>
     </br>
     </br>
+
       Parking: <select id="parking">
         <option value="10">Uso Parking</option>
         <option value="0">Sin parking</option>
       </select>
     </br>
     </br>
-     Spa: <label class="container"> Si<input type="checkbox" name="spasi" id="spasi" value="20">
-        <label class="container"> No<input type="checkbox" name="spano" id="spano" value="0">
-        <span class="checkmark"></span>
-        </label>
 
-    </br>
+      Uso de Spa:
+    <h3 style="color:red" id="error"></h3>
     
-     
-
-    <!--Spa:<select id="spa">
-        <option value="20">Sí</option>
-        <option value="0">No</option>
-      </select>
+        Sí<input type="checkbox" id="spasi" value="20">
+        No<input type="checkbox" id="spano" value="0">
     </br>
-      <p>Uso de Spa:<input type="checkbox" id="spa" name="spa" value="20">
-        <label for="spa" value="20">Sí</label>   
-        <input type="checkbox" id="nospa" name="nospa" value="0">
-        <label for="spa">No</label></p></br>  
-     </input>-->
+    </br>
+
     </form> 
     </br>
     <div id="botonCalculo">
     <input type="button" value="Calcular" onclick="calcula()">
+    <input type="button" value="Reset" onclick="reset()">
     </div>
     </br>
-    <div id="salida"><p>El total de tu reserva:</p></div>
-
+    
     </fieldset>
+    </div>
 
-
-    <fieldset >
-    <h5>Precios para habitación Standard</h5>
-    <ul class="precios">
-        <li>Uso individual: 75 euros</li>
-        <li>Uso doble: 100 euros</li>
-        <li>Uso triple: 125 euros</li>
-    </ul>
-    <h5>Precios para habitación Junior Suite</h5>
-    <ul class="precios">
-        <li>Uso individual: 90 euros</li>
-        <li>Uso doble: 120euros</li>
-        <li>Uso triple: 150 euros</li>
-    </ul>
-    <h5>Precios para habitación Suite</h5>
-    <ul class="precios">
-        <li>Uso individual: 112,5 euros</li>
-        <li>Uso doble: 150 euros</li>
-        <li>Uso triple: 187,5 euros</li>
-    </ul>
-
-    <h5>Precios parking:</h5> <p>10 euros/noche.</p>
-    <h5>Precio uso spa:</h5><p>20 euros/noche.</p>
-
-    </fieldset>
+    <div style="align-self: center">
+    <div id="salida">El total de tu reserva:
+    <h3 style="color:green" id="result"></h3> 
+    </div>
+ 
+</div>
       
     <script src="script.js"></script>
   </body>
