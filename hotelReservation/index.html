@@ -70,19 +70,20 @@
     </br>
 
       Uso de Spa:
-    <h3 style="color:red" id="error"></h3>
+    <h4 style="color:red" id="error"></h4>
     
         Sí<input type="checkbox" id="spasi" value="20">
         No<input type="checkbox" id="spano" value="0">
     </br>
     </br>
 
-    </form> 
+    
     </br>
     <div id="botonCalculo">
     <input type="button" value="Calcular" onclick="calcula()">
-    <input type="button" value="Reset" onclick="reset()">
+    <button type="reset" id= "borrar">Borrar Datos</button>
     </div>
+    </form>
     </br>
     
     </fieldset>
@@ -90,9 +91,8 @@
 
     <div style="align-self: center">
     <div id="salida">El total de tu reserva:
-    <h3 style="color:green" id="result"></h3> 
+    <h2 style="color:green" id="result"></h2> 
     </div>
- 
 </div>
       
     <script src="script.js"></script>
