@@ -1,8 +1,6 @@
 function calcula() {
     let numero = document.fdatos.entrada.value;
 
-   
-
     let dato = document.getElementById("lista");
     let valor = dato.options[lista.selectedIndex].value;
     let datoP = document.getElementById("parking");
@@ -10,16 +8,8 @@ function calcula() {
 
     let yes = document.getElementById("spasi"); 
     let no = document.getElementById("spano"); 
-    //let spasi = yes.checked;
-    //let spano = no.checked;
     let hab = (numero * valor);
     let aparc =(numero * park); 
-
-
-    //let result = (hab) * (aparc) + (yes);
-
-
-    //function checkCheckbox() {  
        
       if (yes.checked == true && no.checked == true){  
         return document.getElementById("error").innerHTML = "(Por favor, marca solo una opción)";  
